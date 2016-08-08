@@ -20,7 +20,7 @@ export function apiRequest() {
   return dispatch => {
     dispatch(apiStart());
 
-    return dispatch(fetch('http://redux-oauth-backend.herokuapp.com/test/test'))
+    return dispatch(fetch('https://redux-oauth-backend.herokuapp.com/test/test'))
       .then(parseResponse)
       .then(({ payload }) => dispatch(apiDone(payload)))
       .catch(errors => dispatch(apiError(errors)));
