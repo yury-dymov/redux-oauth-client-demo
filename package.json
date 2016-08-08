@@ -1,7 +1,7 @@
 {
   "name": "redux-oauth-client-demo",
   "version": "1.0.0",
-  "description": "Clien-only demo for redux-oauth library",
+  "description": "Client-only demo for redux-oauth library",
   "main": "dist/bundle.js",
   "scripts": {
     "build": "NODE_ENV=production node node_modules/webpack/bin/webpack -p",
