@@ -1,0 +1,52 @@
+{
+  "name": "redux-oauth-client-demo",
+  "version": "1.0.0",
+  "description": "Clien-only demo for redux-oauth library",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "node node_modules/webpack/bin/webpack -p",
+    "webpack-devserver": "node node_modules/webpack-dev-server/bin/webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base dist --port 9050 --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yury-dymov/redux-oauth-client-demo.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "token-based",
+    "authentication",
+    "oauth2"
+  ],
+  "author": "Yuri Dymov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yury-dymov/redux-oauth-client-demo/issues"
+  },
+  "homepage": "https://github.com/yury-dymov/redux-oauth-client-demo#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.13.0",
+    "bluebird": "^3.4.1",
+    "classnames": "^2.2.5",
+    "immutable": "^3.8.1",
+    "lodash": "^4.14.1",
+    "react": "^15.3.0",
+    "react-bootstrap": "^0.30.2",
+    "react-bootstrap-button-loader": "^1.0.0",
+    "react-dom": "^15.3.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-immutablejs": "0.0.8",
+    "redux-oauth": "^2.0.3",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-0": "^6.5.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
