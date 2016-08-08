@@ -3,7 +3,12 @@ global.Promise         = require('bluebird');
 var webpack            = require('webpack');
 var path               = require('path');
 
-const plugins = [
+var plugins = [
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
+    }
+  }),
   new webpack.optimize.DedupePlugin(),
   new webpack.optimize.OccurenceOrderPlugin()
 ];
@@ -26,7 +31,7 @@ module.exports = {
       { test: /\.jsx?$/, loader: 'babel', exclude: [/node_modules/, /public/] }
     ]
   },
-  devtool: 'source-map',
+  devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : null,
   devServer: {
     headers: { 'Access-Control-Allow-Origin': '*' }
   }

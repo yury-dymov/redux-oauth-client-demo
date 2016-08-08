@@ -21,7 +21,7 @@ const store         = createStore(
 
 const reduxOauthConfig = {
   backend: {
-    apiUrl:       'http://redux-oauth-backend.herokuapp.com',
+    apiUrl:       'https://redux-oauth-backend.herokuapp.com',
     signOutPath:  null,
     authProviderPaths: {
       github: '/auth/github'
