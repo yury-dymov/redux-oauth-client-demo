@@ -1,22 +1,26 @@
-import React                                              from 'react';
-import ReactDOM                                           from 'react-dom';
+import React                                                      from 'react';
+import ReactDOM                                                   from 'react-dom';
 
-import { initialize, authStateReducer }                   from 'redux-oauth';
-import { createStore, applyMiddleware, combineReducers }  from 'redux';
-import thunk                                              from 'redux-thunk';
-import { Provider }                                       from 'react-redux';
+import { initialize, authStateReducer }                           from 'redux-oauth';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
+import thunk                                                      from 'redux-thunk';
+import { Provider }                                               from 'react-redux';
 
-import test                                               from 'redux/reducer';
+import test                                                       from 'redux/reducer';
 
-import App                                                from 'componets/App';
+import App                                                        from 'components/App';
+import DevTools                                                   from 'components/DevTools';
 
-const store         = createStore(
+const store = createStore(
   combineReducers({
     auth: authStateReducer,
     test
   }),
   {},
-  applyMiddleware(thunk)
+  compose(
+    applyMiddleware(thunk),
+    DevTools.instrument()
+  )
 );
 
 const reduxOauthConfig = {
