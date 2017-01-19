@@ -40,7 +40,7 @@
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.11",
     "redux-immutablejs": "0.0.8",
-    "redux-oauth": "^2.0.3",
+    "redux-oauth": "^2.0.5",
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
