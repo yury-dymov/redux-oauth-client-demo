@@ -5,7 +5,7 @@
   "main": "dist/bundle.js",
   "scripts": {
     "build": "better-npm-run build",
-    "webpack-devserver": "better-npm-run webpack-dev-server"
+    "webpack-devserver": "better-npm-run webpack-devserver"
   },
   "betterScripts": {
     "build": {
